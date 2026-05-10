@@ -2,8 +2,9 @@ from flask import Flask, render_template,request
 from models.db import db
 
 from routes.routes_patient import patient_bp
+
 #THIS MUST BE REMOVED BY PERSON WORKING ON EMPLOYEE MODULE
-#from routes.routes_employee import employee_bp 
+from routes.routes_employee import employee_bp 
 
 #THIS MUST BE REMOVED BY PERSON WORKING ON MEDICINE MODULE
 #from routes.routes_medicine import medicine_bp
@@ -18,7 +19,7 @@ with app.app_context():
 
 app.register_blueprint(patient_bp)
 
-#app.register_blueprint(employee_bp) THIS MUST BE REMOVED BY PERSON WORKING ON EMPLOYEE MODULE
+app.register_blueprint(employee_bp) 
 #app.register_blueprint(medicine_bp) THIS MUST BE REMOVED BY PERSON WORKING ON MEDICINE MODULE
 
 
