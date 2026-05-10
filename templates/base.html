@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+
+
+<body class="bg-light">
+    <div class="container-fluid mt-2 p-3 bg-primary-subtle text-dark">
+        <h1 class="text-center"> Welcome to Hospital Management System</h1>
+    </div>
+    <div class="container-fluid mt-2 p-2 bg-primary-subtle text-dark">
+
+
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Patient
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{url_for('patient.add_patient')}}">Add Patient</a></li>
+                <li><a class="dropdown-item" href="{{url_for('patient.view_update_patient')}}">View&Update</a></li>
+            </ul>
+        </div>
+
+
+
+        {# THIS COMMENT MUST BE REMOVED BY THE STUDENT WORKING ON EMPLOYEE MODULE
+        <div class="btn-group">
+            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Employee
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{url_for('employee.add_employee')}}">Add Employee</a></li>
+                <li><a class="dropdown-item" href="{{url_for('employee.view_update_employee')}}">View&Update</a></li>
+            </ul>
+        </div> EMPLOYEE COMMENT MODULE ENDS HERE #}
+
+
+        {# THIS COMMENT MUST BE REMOVED BY THE STUDENT WORKING ON MEDICINE MODULE
+        <div class="btn-group">
+            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Medicine
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{url_for('medicine.add_medicine')}}">Add Medicine</a></li>
+                <li><a class="dropdown-item" href="{{url_for('medicine.view_update_medicine')}}">View&Update</a></li>
+            </ul>
+        </div> MEDICINE COMMENT MODULE ENDS HERE #}
+
+
+    </div>
+    <div class="container-fluid mt-3 bg-secondary-subtle">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
