@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid mt-2 p-2">
+    <h5 class="text-center">Medicine Management-Add Medicine</h5>
+</div>
+<form method="POST">
+
+    <div class="mb-2">
+        <label>Medicine Name</label>
+        <input type="text" name="name" class="form-control" required>
+    </div>
+
+    <div class="mb-2">
+        <label>Quantity</label>
+        <input type="number" name="quantity" class="form-control" required>
+    </div>
+
+    <div class="mb-2">
+        <label>Price</label>
+        <input type="number" name="price" class="form-control" required>
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+{% endblock %}
